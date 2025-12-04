@@ -28,4 +28,5 @@ rm(PCdata)
 
 colnames(Ddata)[1] <- "IID"
 Ddata <- Ddata[,c("FID", "IID", "age", "gender", "logCAC", paste0("PC", 1:10))] #Remember to add age2 if needed
+
 write.table(Ddata, "dataF_data_logCAC.txt", sep = "\t", quote = F, row.names = F)
