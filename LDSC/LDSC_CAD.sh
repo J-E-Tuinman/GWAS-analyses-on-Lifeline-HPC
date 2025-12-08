@@ -60,7 +60,7 @@ cd $TMPDIR
 ################################################################################
 # 4. Munge (harmonize) both phenotypes
 ################################################################################
-
+#Make sure the files contain at least (bare minimum) the following columns: SNP (rsID), A1, A2, P
 echo "Munging (harmonizing)..."
 
 python $LDSC_DIR/munge_sumstats.py \
