@@ -10,7 +10,6 @@
 ################################################################################
 # FILE PATHS
 ################################################################################
-N=6626   
 
 # LDSC installation directory (contains ldsc/ folder with ldscore package)
 LDSC_DIR="/groups/umcg-lifelines/tmp02/projects/ov23_0782/jtuinman/python_ldsc_env/ldsc"
