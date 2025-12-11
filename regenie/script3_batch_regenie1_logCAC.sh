@@ -5,6 +5,7 @@
 #SBATCH --job-name=batch
 
 cd /groups/umcg-lifelines/tmp02/projects/ov23_0782/jtuinman/scripts
+# changing lines in 'script3_template_regenie1_logCAC.sh' for easy reuse for different Datasets and phenotypes
 cat script3_template_regenie1_logCAC.sh | sed "s/DATA/DATA/g;s/PHENO/logCAC/g"  > tempL3_DATA_logCAC.sh
 
 sbatch tempL3_DATA_logCAC.sh
