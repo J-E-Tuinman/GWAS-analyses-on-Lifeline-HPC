@@ -11,10 +11,10 @@
 
 cd /groups/umcg-lifelines/tmp02/projects/ov23_0782/jtuinman/output/DATA-PLINK
 # Preparing genotype file for regenie step1
-# Note for next time: running time is somewhat unpredictable: I've seen both 15+ mins and < 5
+# Note for next time: running time is somewhat unpredictable: I've seen both 15+ mins and < 5 min
 
 
-cd "/groups/umcg-lifelines/tmp02/projects/ov19_0495/3_Round2_Imputed_Genotypes_cleaned/PLINK_prunedgenotypes/"
+cd /groups/umcg-lifelines/tmp02/projects/ov19_0495/3_Round2_Imputed_Genotypes_cleaned/PLINK_prunedgenotypes/
 cp UGLI0-3_HQSNPs_pruned.bed $TMPDIR
 cp UGLI0-3_HQSNPs_pruned.bim $TMPDIR
 cp UGLI0-3_HQSNPs_pruned.fam $TMPDIR
@@ -23,14 +23,15 @@ cd $TMPDIR
 
 
 # Change name of file
-# using PLINK 1.9 instead of 2, because the --pmerge command is not recognized (I guess our PLINK2 is old?)
+# using PLINK 1.9 instead of 2, previous script required this due to merging bfiles
+# possibly not required
 module load PLINK/1.9-beta6-20190617
 plink --bfile UGLI0-3_HQSNPs_pruned --make-bed --out dataG_DATA_v1
 
 module purge
 # loading PLINK2 because the no-id-header command is not recognized by PLINK 1
 module load PLINK/2.0-alpha6.20-20250707
-
+# performing QC and LD-pruning
 plink2 \
   --bfile dataG_DATA_v1 \
   --geno 0.1 \
@@ -49,6 +50,5 @@ mv *.log /groups/umcg-lifelines/tmp02/projects/ov23_0782/jtuinman/output/DATA-PL
 gzip dataG_DATA_v1.b*
 mv dataG_DATA_* /groups/umcg-lifelines/tmp02/projects/ov23_0782/jtuinman/output/DATA-PLINK
 
-#ls > /groups/umcg-lifelines/tmp02/projects/ov21_0338/Regenie_test/log2_regenie_GSA_PLINK_LoF.txt
 cd /groups/umcg-lifelines/tmp02/projects/ov23_0782/jtuinman/output
 
