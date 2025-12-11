@@ -12,14 +12,13 @@
 cd /groups/umcg-lifelines/tmp02/projects/ov23_0782/jtuinman/output/DATA-PLINK/
 gunzip dataG_DATA_v*.gz
 
-# Prepare folders : regenie_GSA1, regenie_AFFY1, regenie_CS1 in advance
+# Prepare folders : DATA-regenie1 in advance
 # It may not be necessary to use a separate temp folder for all as the temp files get unique names
-# Note for next time: maybe change -out   into     --out DATA-regenie1/PHENO
 
 cd /groups/umcg-lifelines/tmp02/projects/ov23_0782/jtuinman/output/
 DIR_TEMP=./temp_DATA_PHENO	# for dumping low-mem index
 mkdir -p $DIR_TEMP
-# Note: use sure that the files in lowmem-prefix do NOT have overlapping names if you are running multiple phenotypes concurrently
+# Note: be sure that the files in lowmem-prefix do NOT have overlapping names if you are running multiple phenotypes concurrently
 # Note: for binary phenotypes, add argument --bt to below command. Binary uses 0/1 coding (with NA for missing)
 # Note: missing phenotypes will be imputed in step1; unless argument --strict is used, which will remove samples with any missing phenotypes
 
