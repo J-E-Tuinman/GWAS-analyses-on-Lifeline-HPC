@@ -3,7 +3,7 @@ setwd("/groups/umcg-lifelines/tmp02/projects/ov23_0782/jtuinman/output/")
 
 #load in applicable libraries
 library(e1071) #for skewness and kurtosis functions
-library(dplyr) #for data manipulation
+library(dplyr) #for log transform
 
 #Read in data
 all <- read.table("/groups/umcg-lifelines/tmp02/projects/ov23_0782/jtuinman/samples_new/all_used_data.txt", header=T, stringsAsFactors = F)
@@ -36,3 +36,4 @@ qqline(all_log$logCAC)
 dev.off()
 #generate file with log CAC scores
 write.table(all_log, "pheno_log.txt", sep = "\t", row.names = F, quote = F)
+
