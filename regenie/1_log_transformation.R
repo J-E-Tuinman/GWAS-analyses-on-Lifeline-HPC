@@ -1,15 +1,15 @@
 #set working directory
-setwd("/groups/umcg-lifelines/tmp02/projects/ov23_0782/jtuinman/output/")
+setwd("/groups/umcg-lifelines/tmp02/projects/ov23_0782/jtuinman/output/UGLI0-3/output/")
 
 #load in applicable libraries
 library(e1071) #for skewness and kurtosis functions
 library(dplyr) #for log transform
 
 #Read in data
-all <- read.table("/groups/umcg-lifelines/tmp02/projects/ov23_0782/jtuinman/samples_new/all_used_data.txt", header=T, stringsAsFactors = F)
+data <- read.table("/groups/umcg-lifelines/tmp02/projects/ov23_0782/jtuinman/output/UGLI0-3/samples/imal_euro_filtered.txt", header=T, stringsAsFactors = F)
 
 #Perform log transformation on CAC score
-all_log <- all %>%
+all_log <- data %>%
   mutate(logCAC = log(cacscore_agatston_adu_m_1 + 1))
 
 

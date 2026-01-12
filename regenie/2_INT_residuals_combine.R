@@ -1,12 +1,12 @@
 #set working directory
-setwd("/groups/umcg-lifelines/tmp02/projects/ov23_0782/jtuinman/output/")
+setwd("/groups/umcg-lifelines/tmp02/projects/ov23_0782/jtuinman/output/UGLI0-3/output/")
 
 ###Generating residuals for INT transform
 #load in applicable libraries
 library(e1071) #for skewness and kurtosis functions
 library(dplyr) #for INT transform
 #load in data
-all <- read.table("/groups/umcg-lifelines/tmp02/projects/ov23_0782/jtuinman/samples_new/all_used_data.txt", header=T, stringsAsFactors = F)
+all <- read.table("/groups/umcg-lifelines/tmp02/projects/ov23_0782/jtuinman/output/UGLI0-3/samples/imal_euro_filtered.txt", header=T, stringsAsFactors = F)
 all_log <- read.table("pheno_log.txt", header=T, stringsAsFactors=F)
 
 #fit linear model to data
