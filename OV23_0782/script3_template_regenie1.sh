@@ -5,8 +5,8 @@
 #SBATCH --mem=12G
 #SBATCH --tmp=30GB
 #SBATCH --cpus-per-task=8
-#SBATCH --output=/groups/umcg-lifelines/tmp02/projects/ov23_0782/jtuinman/UGLI0-3/output/DATA-PLINK/logs/log3_DATA_PHENO.txt
-#SBATCH --error=/groups/umcg-lifelines/tmp02/projects/ov23_0782/jtuinman/UGLI0-3/output/DATA-PLINK/logs/log3_DATA_PHENO.err
+#SBATCH --output=/groups/umcg-lifelines/tmp02/projects/ov23_0782/jtuinman/UGLI0-3/output/DATA-regenie1/logs/log3_DATA_PHENO.txt
+#SBATCH --error=/groups/umcg-lifelines/tmp02/projects/ov23_0782/jtuinman/UGLI0-3/output/DATA-regenie1/logs/log3_DATA_PHENO.err
 #SBATCH -t 00:40:00
 
 cd /groups/umcg-lifelines/tmp02/projects/ov23_0782/jtuinman/output/DATA-PLINK/

@@ -1,5 +1,5 @@
 #set working directory
-setwd("/groups/umcg-lifelines/tmp02/projects/ov23_0782/jtuinman/output/UGLI0-3")
+setwd("/groups/umcg-lifelines/tmp02/projects/ov23_0782/jtuinman/UGLI0-3")
 
 #read in data
 ethnicity <- read.csv("/groups/umcg-lifelines/prm03/projects/ov23_0782/dataset_order_202506/results/1b_q_1_results.csv", header = T)

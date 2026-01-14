@@ -15,7 +15,7 @@ module load regenie
 for CHR in `seq 1 22` 
 do
       BGEN_FILE=/groups/umcg-lifelines/rsc02/releases/gsa_imputed/v2/BGEN/chr_${CHR}.GSAr2.bgen
-      SAMPLE_FILE=/groups/umcg-lifelines/rsc02/releases/gsa_imputed/v2/BGEN/chr_${CHR}.GSAr2.sample
+      SAMPLE_FILE=/groups/umcg-lifelines/rsc02/releases/gsa_imputed/v2/BGEN/chr_${CHR}.GSAr2.sample #SEX = NA
 
       # Run regenie step 2
   regenie \
