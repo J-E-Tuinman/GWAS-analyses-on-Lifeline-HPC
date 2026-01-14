@@ -5,7 +5,7 @@
 #SBATCH --partition=regular
 #SBATCH --mem=64GB
 #SBATCH --tmp=30GB
-#SBATCH --job-name=cs_prep
+#SBATCH --job-name=CS_prep
 #SBATCH --output=/groups/umcg-lifelines/tmp02/projects/ov23_0782/jtuinman/UGLI0-3/scripts/logs/log2_regenie_CS_PLINK.out
 #SBATCH --error=/groups/umcg-lifelines/tmp02/projects/ov23_0782/jtuinman/UGLI0-3/scripts/logs/log2_regenie_CS_PLINK.err
 

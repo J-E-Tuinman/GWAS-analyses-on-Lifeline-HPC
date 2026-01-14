@@ -5,7 +5,7 @@
 #SBATCH --partition=regular
 #SBATCH --mem=64GB
 #SBATCH --tmp=30GB
-#SBATCH --job-name=GSA_prep
+#SBATCH --job-name=AFFY_prep
 #SBATCH --output=/groups/umcg-lifelines/tmp02/projects/ov23_0782/jtuinman/UGLI0-3/scripts/logs/log2_regenie_AFFY_PLINK.out
 #SBATCH --error=/groups/umcg-lifelines/tmp02/projects/ov23_0782/jtuinman/UGLI0-3/scripts/logs/log2_regenie_AFFY_PLINK.err
 
