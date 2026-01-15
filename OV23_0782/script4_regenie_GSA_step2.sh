@@ -9,7 +9,7 @@
 #SBATCH --error=/groups/umcg-lifelines/tmp02/projects/ov23_0782/jtuinman/UGLI0-3/output/GSA-regenie2/logs/log4_GSA_logCAC.err
 #SBATCH -t 24:00:00
 
-# Prepare folders in advance: CS-regenie2, CS-regenie2/logs
+# Prepare folders in advance: GSA-regenie2, GSA-regenie2/logs
 
 cd /groups/umcg-lifelines/tmp02/projects/ov23_0782/jtuinman/UGLI0-3/output
 module load regenie
