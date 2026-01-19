@@ -16,7 +16,7 @@ DALL <- merge(DALL, Dlink[,-1], by.x = "project_pseudo_id", by.y = "project_pseu
 
 #### data prep ####
 #load in UGLI linkage file
-Ddata <- read.table("/groups/umcg-lifelines/tmp02/projects/ov19_0495/1_LLphenotypes/Linkage_files/Cyto+UGLI+UGLI2+UGLI3_released_samples_linkage_all_plate_pos_withexclusionsUGLI2_updated.txt", header = T, stringsAsFactors = F)
+Ddata <- read.table("Linkage_file_path", header = T, stringsAsFactors = F)
 Ddata <- merge(Ddata, DALL, all.x = F, all.y = F, by.x = "PROJECT_PSEUDO_ID", by.y = "project_pseudo_id_LL")
 
 #remove duplicates

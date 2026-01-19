@@ -14,10 +14,10 @@ cd /groups/umcg-lifelines/tmp02/projects/ov23_0782/jtuinman/output/DATA-PLINK
 # Note for next time: running time is somewhat unpredictable: I've seen both 15+ mins and < 5 min
 
 
-cd /groups/umcg-lifelines/tmp02/projects/ov19_0495/3_Round2_Imputed_Genotypes_cleaned/PLINK_prunedgenotypes/
-cp UGLI0-3_HQSNPs_pruned.bed $TMPDIR
-cp UGLI0-3_HQSNPs_pruned.bim $TMPDIR
-cp UGLI0-3_HQSNPs_pruned.fam $TMPDIR
+cd /path/to/PLINK/files
+cp .bed $TMPDIR
+cp .bim $TMPDIR
+cp .fam $TMPDIR
 
 cd $TMPDIR
 
@@ -26,7 +26,7 @@ cd $TMPDIR
 # using PLINK 1.9 instead of 2, previous script required this due to merging bfiles
 # possibly not required
 module load PLINK/1.9-beta6-20190617
-plink --bfile UGLI0-3_HQSNPs_pruned --make-bed --out dataG_DATA_v1
+plink --bfile plink_files --make-bed --out dataG_DATA_v1
 
 module purge
 # loading PLINK2 because the no-id-header command is not recognized by PLINK 1

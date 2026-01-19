@@ -18,7 +18,7 @@ module load PLINK/2.0-alpha6.20-20250707
 ###############################################
 
 # Directory with 10-part-per-chromosome imputed data
-IMPUTE_DIR="/groups/umcg-lifelines/tmp02/projects/ov19_0495/3_Round2_Imputed_Genotypes_cleaned/BGEN"
+IMPUTE_DIR="/imputed/BGEN"
 
 # Prefix of imputed files like: chr1_part1.bgen / chr1_part1.sample
 PREFIX="chr_"
@@ -51,7 +51,7 @@ trap cleanup EXIT
 echo "Creating 20k individual subset..."
 
 # Extract sample IDs from chromosome 1 part 1
-awk 'NR>2 {print $1, $2}' "${IMPUTE_DIR}/UGLI0to3.sample" \
+awk 'NR>2 {print $1, $2}' "${IMPUTE_DIR}/sample_file" \
     > "${TMPDIR}/all_ids.txt"
 
 # Random subset of 20k individuals
@@ -71,8 +71,8 @@ for CHR in 16; do
     ###################################################
 
     for PART in {1..10}; do
-        IN_BGEN="${IMPUTE_DIR}/${PREFIX}${CHR}_part${PART}_UGLI0to3.bgen"
-        IN_SAMPLE="${IMPUTE_DIR}/UGLI0to3.sample"
+        IN_BGEN="${IMPUTE_DIR}/${PREFIX}${CHR}_part${PART}.bgen"
+        IN_SAMPLE="${IMPUTE_DIR}/.sample"
 
         if [ ! -f "${IN_BGEN}" ]; then
             echo "WARNING: Missing file ${IN_BGEN}"
