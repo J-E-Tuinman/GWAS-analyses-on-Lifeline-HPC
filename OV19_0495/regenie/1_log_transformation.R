@@ -36,4 +36,3 @@ qqline(all_log$logCAC)
 dev.off()
 #generate file with log CAC scores
 write.table(all_log, "pheno_log.txt", sep = "\t", row.names = F, quote = F)
-
