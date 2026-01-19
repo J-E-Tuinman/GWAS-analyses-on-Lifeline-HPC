@@ -17,8 +17,8 @@ do
   for PART in `seq 1 10` 
   do
 
-      BGEN_FILE=/groups/umcg-lifelines/tmp02/projects/ov19_0495/3_Round2_Imputed_Genotypes_cleaned/BGEN/chr_${CHR}_part${PART}_UGLI0to3.bgen
-      SAMPLE_FILE=/groups/umcg-lifelines/tmp02/projects/ov19_0495/3_Round2_Imputed_Genotypes_cleaned/BGEN/UGLI0to3.sample
+      BGEN_FILE=/BGEN/files/chr_${CHR}_part${PART}.bgen
+      SAMPLE_FILE=/path/to/sample/file(s)
 
       # Run regenie step 2
   regenie \
